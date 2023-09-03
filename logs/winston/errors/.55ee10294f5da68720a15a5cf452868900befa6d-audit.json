@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\errors\\.55ee10294f5da68720a15a5cf452868900befa6d-audit.json",
+    "files": [
+        {
+            "date": 1693720047264,
+            "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\errors\\phu-2023-03-09-11-error.log",
+            "hash": "cae51d35f773c94ddefb4934ec58fc1f597d302454fce3c6ae514ae09e7dd4fc"
+        }
+    ],
+    "hashType": "sha256"
+}

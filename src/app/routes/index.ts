@@ -3,10 +3,9 @@ import express from 'express';
 const router = express.Router();
 
 const moduleRoutes = [
-  // ... routes
   {
     path: "",
-    routes: ""
+    route: 
   }
 ];
 
