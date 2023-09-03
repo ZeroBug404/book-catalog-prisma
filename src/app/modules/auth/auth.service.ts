@@ -2,16 +2,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { User } from '@prisma/client';
 
-import { PrismaClient } from '@prisma/client';
 import httpStatus from 'http-status';
 import { Secret } from 'jsonwebtoken';
 import config from '../../../config';
 import ApiError from '../../../errors/ApiError';
 import { jwtHelpers } from '../../../helpers/jwtHelpers';
-
-const prisma = new PrismaClient({
-  errorFormat: 'minimal',
-});
+import prisma from '../../../shared/prisma';
 
 const insertIntoDB = async (data: User): Promise<Partial<User>> => {
   const result = await prisma.user.create({
@@ -47,7 +43,7 @@ const loginUser = async (data: User) => {
   );
 
   return {
-     accessToken,
+    accessToken,
   };
 };
 

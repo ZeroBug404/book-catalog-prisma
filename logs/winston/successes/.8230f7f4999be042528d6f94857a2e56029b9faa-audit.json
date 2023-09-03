@@ -19,6 +19,11 @@
             "date": 1693725244210,
             "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\successes\\phu-2023-03-09-13-success.log",
             "hash": "30eeec970abf9ccac8dd26f06fb3855ed08d4d31089866f1162f755aa30c7a1b"
+        },
+        {
+            "date": 1693729394995,
+            "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\successes\\phu-2023-03-09-14-success.log",
+            "hash": "b9da69940817f7cd28c279923c164a1a6345825ca60306a76ec828ad777106b7"
         }
     ],
     "hashType": "sha256"
