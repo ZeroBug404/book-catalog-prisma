@@ -14,43 +14,43 @@ const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-// const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
-//     const { id } = req.params;
-//     const result = await StudentService.getByIdFromDB(id);
-//     sendResponse(res, {
-//         statusCode: httpStatus.OK,
-//         success: true,
-//         message: 'Student fetched successfully',
-//         data: result
-//     });
-// });
+const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await UserService.getByIdFromDB(id);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'User fetched successfully',
+    data: result,
+  });
+});
 
-// const updateIntoDB = catchAsync(async (req: Request, res: Response) => {
-//     const { id } = req.params;
-//     const payload = req.body;
-//     const result = await StudentService.updateIntoDB(id, payload);
-//     sendResponse(res, {
-//         statusCode: httpStatus.OK,
-//         success: true,
-//         message: 'Student updated successfully',
-//         data: result
-//     });
-// });
+const updateIntoDB = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const payload = req.body;
+  const result = await UserService.updateIntoDB(id, payload);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'User updated successfully',
+    data: result,
+  });
+});
 
-// const deleteFromDB = catchAsync(async (req: Request, res: Response) => {
-//     const { id } = req.params;
-//     const result = await StudentService.deleteFromDB(id);
-//     sendResponse(res, {
-//         statusCode: httpStatus.OK,
-//         success: true,
-//         message: 'Student deleted successfully',
-//         data: result
-//     });
-// })
+const deleteFromDB = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const result = await UserService.deleteFromDB(id);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'User deleted successfully',
+    data: result,
+  });
+});
 
 export const UserController = {
   getAllFromDB,
-  //   getByIdFromDB,
-  //   updateIntoDB,
-  //   deleteFromDB,
+  getByIdFromDB,
+  updateIntoDB,
+  deleteFromDB,
 };
