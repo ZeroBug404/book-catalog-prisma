@@ -55,7 +55,42 @@ const getAllFromDB = async (token: string | undefined) => {
   return result;
 };
 
+const getByIdFromDB = async (id: string, token: string | undefined) => {
+  const decoded = jwtHelpers.verifyToken(
+    token as string,
+    config.jwt.secret as Secret
+  );
+
+  const { userId, role } = decoded;
+
+  let result;
+
+  if (role === UserRole.customer) {
+    const customerData = await prisma.order.findMany({
+      where: {
+        id,
+        userId: userId,
+      },
+    });
+    if (customerData.length > 0) {
+      result = customerData;
+    } else {
+      result = 'No order found!';
+    }
+  } else {
+    const adminData = await prisma.order.findMany({
+      where: {
+        id,
+      },
+    });
+    result = adminData;
+  }
+
+  return result;
+};
+
 export const OrderService = {
   insertIntoDB,
   getAllFromDB,
+  getByIdFromDB,
 };
