@@ -53,7 +53,6 @@ model Book {
   category   Category @relation(fields: [categoryId], references: [id])
 
   reviewAndRatings ReviewAndRating[]
-  orderedBooks     OrderedBook[]
 
   @@map("book")
 }
@@ -84,23 +83,24 @@ model Order {
   userId String
   user   User   @relation(fields: [userId], references: [id])
 
-  orderedBooks OrderedBook[]
+  // orderedBooks OrderedBook[]
+  orderedBooks Json
 
-  @@map("review_and_ratingorder")
+  @@map("order")
 }
 
-model OrderedBook {
-  id       String @id @default(uuid())
-  quantity String
+// model OrderedBook {
+//   id       String @id @default(uuid())
+//   quantity String
 
-  orderId String
-  order   Order  @relation(fields: [orderId], references: [id])
+//   orderId String
+//   order   Order  @relation(fields: [orderId], references: [id])
 
-  bookId String
-  book   Book   @relation(fields: [bookId], references: [id])
+//   bookId String
+//   book   Book   @relation(fields: [bookId], references: [id])
 
-  @@map("ordered_books")
-}
+//   @@map("ordered_books")
+// }
 
 enum UserRole {
   admin

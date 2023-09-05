@@ -44,6 +44,26 @@
             "date": 1693774905083,
             "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\successes\\phu-2023-04-09-03-success.log",
             "hash": "72b3b9029d8abfbc720e4a21c30772365c5037b36f6e5d3f5dfe212232a354e0"
+        },
+        {
+            "date": 1693851482944,
+            "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\successes\\phu-2023-05-09-00-success.log",
+            "hash": "1815cfe897dab901f3633d776eb440287cb579fa52b89a5754104b991f99c7ee"
+        },
+        {
+            "date": 1693854004384,
+            "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\successes\\phu-2023-05-09-01-success.log",
+            "hash": "45636afdc7abfeb4ec7c7b4bcd34d78c14c9be443dfad869e3618b2c889ef326"
+        },
+        {
+            "date": 1693857698221,
+            "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\successes\\phu-2023-05-09-02-success.log",
+            "hash": "2f78bd4e921f30e5902b34d8f55a4fa3ed2929eb21afb876057f84f0d2634e50"
+        },
+        {
+            "date": 1693891266803,
+            "name": "D:\\WebDev_Level-2\\Assignments\\Book-Catalog-Prisma-Assignment-8\\book-catalog-prisma-backend\\logs\\winston\\successes\\phu-2023-05-09-11-success.log",
+            "hash": "f0f07dd5b2cf97fdca9e4106d09268134294b713f69d1b82bab57fb7a4d8857d"
         }
     ],
     "hashType": "sha256"
