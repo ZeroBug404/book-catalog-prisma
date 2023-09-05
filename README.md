@@ -9,33 +9,33 @@
 
 - api/v1/auth/signup (POST)
 - api/v1/users (GET)
-- api/v1/users/6177a5b87d32123f08d2f5d4 (Single GET) Include an id that is saved in your database
-- api/v1/users/6177a5b87d32123f08d2f5d4 (PATCH)
-- api/v1/users/6177a5b87d32123f08d2f5d4 (DELETE) Include an id that is saved in your database
+- api/v1/users/8fca6599-2242-406c-9172-15488d3985e4 (Single GET) 
+- api/v1/users/8fca6599-2242-406c-9172-15488d3985e4 (PATCH)
+- api/v1/users/8fca6599-2242-406c-9172-15488d3985e4 (DELETE) 
 - api/v1/profile (GET)
 
 ### Category
 
 - api/v1/categories/create-category (POST)
 - api/v1/categories (GET)
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (Single GET) Include an id that is saved in your database
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (PATCH)
-- api/v1/categories/6177a5b87d32123f08d2f5d4 (DELETE) Include an id that is saved in your database
+- api/v1/categories/1af6075a-29b5-468f-b436-97a2973306ff (Single GET) 
+- api/v1/categories/1af6075a-29b5-468f-b436-97a2973306ff (PATCH)
+- api/v1/categories/1af6075a-29b5-468f-b436-97a2973306ff (DELETE) 
 
 ### Books
 
 - api/v1/books/create-book (POST)
 - api/v1/books (GET)
-- api/v1/books/:categoryId/category (GET)
-- api/v1/books/:id (GET)
-- api/v1/books/:id (PATCH)
-- api/v1/books/:id (DELETE)
+- api/v1/books/f0350e97-4706-4bb0-bf96-241f860ea8db/category (GET)
+- api/v1/books/4c6da6ea-4511-4a8a-9965-b0feb4664d45 (GET)
+- api/v1/books/4c6da6ea-4511-4a8a-9965-b0feb4664d45 (PATCH)
+- api/v1/books/4c6da6ea-4511-4a8a-9965-b0feb4664d45 (DELETE)
 
 ### Orders
 
 - api/v1/orders/create-order (POST)
 - api/v1/orders (GET)
-- api/v1/orders/:orderId (GET)
+- api/v1/orders/075ac595-c810-457d-bcea-ef55b78a8714 (GET)
 
 # Book Catalog Prisma Backend
 
