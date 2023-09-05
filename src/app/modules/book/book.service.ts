@@ -13,7 +13,8 @@ const insertIntoDB = async (data: Book): Promise<Book> => {
 
 const getAllFromDB = async (): Promise<Book[]> => {
   const result = await prisma.book.findMany();
-
+  console.log(result);
+  
   return result;
 };
 

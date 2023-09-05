@@ -11,8 +11,6 @@ router.post(
   BookController.insertIntoDB
 );
 
-router.get('/', BookController.getAllFromDB);
-
 router.get('/:id', BookController.getByIdFromDB);
 
 router.get('/:categoryId/category', BookController.getByCategoryIdFromDB);
@@ -28,5 +26,7 @@ router.delete(
   auth(ENUM_USER_ROLE.SUPER_ADMIN, ENUM_USER_ROLE.ADMIN),
   BookController.deleteFromDB
 );
+
+router.get('/', BookController.getAllFromDB);
 
 export const bookRoutes = router;
