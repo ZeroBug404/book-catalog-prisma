@@ -11,7 +11,7 @@ const getProfileFromDB = async (token: string | undefined) => {
 
   const { userId } = decoded;
 
-  const result = await prisma.user.findMany({
+  const result = await prisma.user.findUnique({
     where: {
       id: userId,
     },
