@@ -66,19 +66,22 @@ const getByIdFromDB = async (id: string, token: string | undefined) => {
   let result;
 
   if (role === UserRole.customer) {
-    const customerData = await prisma.order.findMany({
+    const customerData = await prisma.order.findUnique({
       where: {
         id,
         userId: userId,
       },
     });
-    if (customerData.length > 0) {
-      result = customerData;
-    } else {
-      result = 'No order found!';
-    }
+    result = customerData;
+    console.log(result);
+    
+    // if (customerData.length > 0) {
+    //   result = customerData;
+    // } else {
+    //   result = 'No order found!';
+    // }
   } else {
-    const adminData = await prisma.order.findMany({
+    const adminData = await prisma.order.findUnique({
       where: {
         id,
       },

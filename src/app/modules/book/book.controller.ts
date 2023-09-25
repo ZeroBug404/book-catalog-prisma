@@ -3,8 +3,8 @@ import httpStatus from 'http-status';
 import catchAsync from '../../../shared/catchAsync';
 import pick from '../../../shared/pick';
 import sendResponse from '../../../shared/sendResponse';
-import { BookService } from './book.service';
 import { bookFilterableFields } from './book.constant';
+import { BookService } from './book.service';
 
 const insertIntoDB = catchAsync(async (req: Request, res: Response) => {
   const result = await BookService.insertIntoDB(req.body);
@@ -25,7 +25,8 @@ const getAllFromDB = catchAsync(async (req: Request, res: Response) => {
     statusCode: httpStatus.OK,
     success: true,
     message: 'Book fetched successfully',
-    data: result,
+    meta: result.meta,
+    data: result.data,
   });
 });
 
@@ -43,12 +44,19 @@ const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
 const getByCategoryIdFromDB = catchAsync(
   async (req: Request, res: Response) => {
     const { categoryId } = req.params;
-    const result = await BookService.getByCategoryIdFromDB(categoryId);
+    const filters = pick(req.query, bookFilterableFields);
+    const options = pick(req.query, ['limit', 'page', 'sortBy', 'sortOrder']);
+    const result = await BookService.getByCategoryIdFromDB(
+      categoryId,
+      filters,
+      options
+    );
     sendResponse(res, {
       statusCode: httpStatus.OK,
       success: true,
       message: 'Book by category fetched successfully',
-      data: result,
+      meta: result.meta,
+      data: result.data,
     });
   }
 );

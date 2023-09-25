@@ -56,21 +56,22 @@ const getByIdFromDB = (id, token) => __awaiter(void 0, void 0, void 0, function*
     const { userId, role } = decoded;
     let result;
     if (role === client_1.UserRole.customer) {
-        const customerData = yield prisma_1.default.order.findMany({
+        const customerData = yield prisma_1.default.order.findUnique({
             where: {
                 id,
                 userId: userId,
             },
         });
-        if (customerData.length > 0) {
-            result = customerData;
-        }
-        else {
-            result = 'No order found!';
-        }
+        result = customerData;
+        console.log(result);
+        // if (customerData.length > 0) {
+        //   result = customerData;
+        // } else {
+        //   result = 'No order found!';
+        // }
     }
     else {
-        const adminData = yield prisma_1.default.order.findMany({
+        const adminData = yield prisma_1.default.order.findUnique({
             where: {
                 id,
             },

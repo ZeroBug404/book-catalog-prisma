@@ -19,7 +19,8 @@ const prisma_1 = __importDefault(require("../../../shared/prisma"));
 const getProfileFromDB = (token) => __awaiter(void 0, void 0, void 0, function* () {
     const decoded = jwtHelpers_1.jwtHelpers.verifyToken(token, config_1.default.jwt.secret);
     const { userId } = decoded;
-    const result = yield prisma_1.default.user.findMany({
+    console.log(userId);
+    const result = yield prisma_1.default.user.findUnique({
         where: {
             id: userId,
         },
